@@ -29,7 +29,8 @@ mlagents-learn --help
 6. Create a Target (Sphere)
    Select-Gameobject-> 3D Object → Sphere → Rename to Target
 7.Create an empty GameObject → Academy (to reset Agent and Target positions)
-8.Install ml-agents in unity by window-packagemanager-Packageaddbyname=> com.unity.ml-agents => click install
+8.Install ml-agents in unity by window-package manager-Package add by name=>
+com.unity.ml-agents => click install
 9.Create a new script in Project window, name it as RollerAgent.cs and type the script
 10. Attach the script to Agent
 11. In Agent inspector window, add Rolleragent script variable Max step as 10,Rbody as AgentRigid body ,Target transform as Target and force multiplier 10  
