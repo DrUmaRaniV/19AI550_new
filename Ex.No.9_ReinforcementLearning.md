@@ -28,22 +28,26 @@ mlagents-learn --help
 5. Add Rigidbody (disable gravity if needed) to Agent ( by Inspector window- Adcomponent->physics->Rigidbody)
 6. Create a Target (Sphere)
    Select-Gameobject-> 3D Object → Sphere → Rename to Target
-7.Create an empty GameObject → Academy (to reset Agent and Target positions)
-8.Install ml-agents in unity by window-packagemanager-Packageaddbyname=> com.unity.ml-agents => click install
-9.Create a new script in Project window, name it as RollerAgent.cs and type the script
-10. Attach the script to Agent
-11. In Agent inspector window, add Rolleragent script variable Max step as 10,Rbody as AgentRigid body ,Target transform as Target and force multiplier 10  
-12. Add the Behavior Parameters component to your Agent
+7.Install ml-agents in unity by window-packagemanager-Packageaddbyname
+=> com.unity.ml-agents => click install
+8.Create a new script in Project window, name it as RollerAgent.cs and type the script
+9. Attach the script to Agent
+10. In Agent inspector window,
+add Rolleragent script variable Max step as 100,
+Rbody as AgentRigid body ,
+Target transform as Target
+Force multiplier 10  
+11. Add the Behavior Parameters component to your Agent
     Addcomponent->ML Agents -> Behavior Parameters and set the follwing 
     Behavior Name: RollerBallBehavior
     Vector Observation: 8 (4 for agent pos + 3 for target pos + 1 for velocity), 
     Action Space: Continuous (2)
 12. Add the Decision requestor
- Addcomponent->ML Agents -> Decision Requestor ->set decision period 5 
+      Addcomponent->ML Agents -> Decision Requestor ->set decision period 5 
 13. In command prompt, Run the command to start ML agents to learn the Unity 
       mlagents-learn "C:\Users\umara\rollerball-udemy\Config\Rollerball.yaml" --run-id=RollerBall_002 --train --no-graphics
    Note "C:\Users\umara\rollerball-udemy\Config\Rollerball.yaml" change it by your file path where yaml file is located
-14. In unity start play button and see the output of roller ball
+14.In unity start play button and see the output of roller ball
 15.Run tensor board in command prompt
 tensorboard --logdir results
 16 Get the results by running the localhost on specific port ( shown in tensorboard)
